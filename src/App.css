@@ -1,0 +1,143 @@
+/* WEATHER APP - COMPLETE CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #14263d;
+  background-image:
+    linear-gradient(rgba(0, 15, 35, 0.25),
+      rgba(0, 15, 35, 0.45)),
+    url("/weather-bc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  max-width: none;
+  padding: 40px 16px;
+  text-align: center;
+  background: transparent;
+}
+
+/* WEATHER APP HEADING */
+
+h1 {
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 25px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* SEARCH BOX */
+
+.MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 15px !important;
+  color: #172b4d !important;
+}
+
+.MuiOutlinedInput-input {
+  color: #172b4d !important;
+  font-size: 18px !important;
+}
+
+.MuiInputBase-input::placeholder {
+  color: #555 !important;
+  opacity: 1;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2196f3 !important;
+}
+
+/* SEARCH BUTTON */
+
+.MuiButton-root {
+  background-color: #1976d2 !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 10px 25px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiButton-root:hover {
+  background-color: #0d47a1 !important;
+  transform: translateY(-2px);
+}
+
+/* WEATHER CARD */
+
+.MuiCard-root {
+  border-radius: 20px !important;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.90) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+  transition: transform 0.3s ease;
+  color: #172b4d;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+}
+
+.MuiCardMedia-root {
+  object-fit: cover;
+}
+
+.MuiCardContent-root {
+  padding: 20px !important;
+}
+
+.MuiTypography-root {
+  overflow-wrap: anywhere;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+  #root {
+    padding: 30px 12px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .MuiCard-root {
+    max-width: 100%;
+  }
+
+  .MuiOutlinedInput-root {
+    max-width: 100%;
+  }
+}
